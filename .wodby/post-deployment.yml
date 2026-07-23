@@ -1,6 +1,6 @@
 version: 0.1
 
 jobs:
-  go-app-check:
+  smoke-test:
     steps:
-    - run: curl -fsS http://go:8080/healthz
+    - run: curl -fsS "http://${WODBY_APP_SERVICE_NAME}:8080/healthz"
