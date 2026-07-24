@@ -11,6 +11,7 @@ jobs:
     - clone
     - run: wodby ci init $WODBY_BUILD_ID
     - run: wodby ci run -- go test ./...
+    - run: wodby ci run -- go vet ./...
     - run: wodby ci build go -f Dockerfile
     - run: wodby ci release
     - run: wodby ci deploy
