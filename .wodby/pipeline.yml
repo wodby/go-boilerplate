@@ -13,5 +13,5 @@ jobs:
     - run: wodby ci run -- go test ./...
     - run: wodby ci run -- go vet ./...
     - run: wodby ci build go -f Dockerfile
-    - run: wodby ci release
+    - run: wodby ci push
     - run: wodby ci deploy
